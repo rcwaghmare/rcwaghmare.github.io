@@ -71,3 +71,24 @@ window.addEventListener('scroll', () => {
     }
   }
 });
+
+// Quote section scroll animation
+document.addEventListener("DOMContentLoaded", () => {
+  const quote = document.querySelector('.quote-text');
+  if (!quote) return;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const quoteHeight = quote.offsetHeight;
+    const triggerPoint = quote.getBoundingClientRect().top + window.scrollY;
+    const distance = scrollTop - triggerPoint;
+
+    if (distance > 0 && distance < quoteHeight * 1.2) {
+      quote.style.opacity = 1 - distance / (quoteHeight * 1.2);
+    } else if (distance <= 0) {
+      quote.style.opacity = 1;
+    } else {
+      quote.style.opacity = 0;
+    }
+  });
+});
