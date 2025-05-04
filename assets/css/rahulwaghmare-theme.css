@@ -39,21 +39,43 @@
   ---------------------------------- */
   .navigation-container {
     position: fixed;
-    width: 100%;
-    background: white;
     top: 0;
     left: 0;
+    width: 100%;
+    background: white;
     z-index: 999;
     transition: opacity 0.4s ease;
+    box-shadow: none; /* Remove default bottom border/shadow */
+    border-bottom: none; /* Remove any visible border */
   }
-  
+
+  html {
+    overflow-y: scroll; /* Prevent jumpiness by always reserving space for scrollbar */
+  }
+
+  .nav-flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 4rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+
   .navigation-link {
-    margin-right: 2rem;
     text-decoration: none;
-    color: var(--text-color);
     font-weight: 600;
+    color: var(--text-color);
+    transition: color 0.3s ease;
   }
-  
+
+  .navigation-link:hover {
+    color: var(--accent-color);
+  }
+
   .navigation-link.w--current {
     color: var(--accent-color);
   }
@@ -69,8 +91,9 @@
   
   .intro-points {
     position: relative;
-    height: 2.8rem;  /* increased for better vertical padding */
+    height: 2.8rem;
     overflow: hidden;
+    margin-top: 1rem;
   }
 
   .intro-point {
@@ -78,17 +101,17 @@
     left: 0;
     top: 0;
     opacity: 0;
-    transform: translateY(2rem);
+    transform: translateY(20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
     font-size: 2rem;
     font-weight: 700;
     color: var(--accent-color);
+    pointer-events: none;
   }
 
   .intro-point.current {
     opacity: 1;
     transform: translateY(0);
-    position: absolute;
   }
   
   /* ----------------------------------
@@ -164,6 +187,7 @@
     font-size: 0.9rem;
     display: inline-block;
     transition: all 0.3s ease;
+    cursor: pointer;
   }
   
   .lets-talk-button:hover {
@@ -176,26 +200,6 @@
     text-align: center;
     font-size: 0.9rem;
     color: var(--subtext-color);
-  }
-  
-  /* ----------------------------------
-     Accordion Section
-  ---------------------------------- */
-  .services-wrapper .service {
-    border-bottom: 1px solid var(--divider-color);
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .service.is-open .service-trigger {
-    transform: rotate(45deg);
-  }
-  
-  .service-points li::before {
-    content: "—";
-    color: var(--accent-color);
-    margin-right: 0.5rem;
-    font-weight: 600;
   }
   
   /* ----------------------------------
@@ -223,6 +227,180 @@
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
+
+  .work-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+    margin-top: 3rem;
+  }
+
+  .work-intro {
+    max-width: 20rem;
+  }
+
+  .work-points {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .work-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 1.25rem;
+  }
+
+  .work-point:last-child {
+    border-bottom: none;
+  }
+
+  .point-number {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--accent-color);
+    min-width: 2rem;
+  }
+
+  .point-body {
+    flex-grow: 1;
+  }
+
+  .point-title {
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.125rem;
+  }
+
+  .point-body p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+  }
+  
+  /* ----------------------------------
+     Services Section
+  ---------------------------------- */
+  .services-section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: minmax(auto, 24rem) 2fr;
+    gap: 8rem;
+    align-items: start;
+  }
+
+  .services-intro {
+    max-width: 20rem;
+    text-align: left;
+  }
+
+  .section-subtext {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    color: var(--text-color);
+  }
+
+  .services-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: left; /* ✅ Force all content left-aligned */
+  }
+
+  .service {
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 2rem;
+  }
+
+  .service:first-child {
+    border-top: 1px solid var(--accent-color);
+  }
+
+  .service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem 0;
+  }
+
+  .service-left {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  .point-number {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--accent-color);
+    min-width: 2.5rem;
+    text-align: left;
+  }
+
+  .point-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: left;
+  }
+
+  .service-trigger {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    transition: transform 0.2s ease;
+  }
+
+  .service.is-open .service-trigger {
+    transform: rotate(45deg);
+  }
+
+  .service-points {
+    display: none;
+    margin-top: 1rem;
+    padding: 0 0 0 3.5rem;
+    text-align: left;
+  }
+
+  .service.is-open .service-points {
+    display: block;
+  }
+
+  .service-points ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  .service-points li {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+    line-height: 1.5;
+  }
+
+  .service-points li::before {
+    content: "—";
+    color: var(--accent-color);
+    margin-right: 0.75rem;
+    margin-left: 0;
+    order: -1;
+  }
   
   /* ----------------------------------
      Footer
@@ -239,6 +417,54 @@
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
+
+  .site-footer {
+    flex-shrink: 0;
+    margin-top: auto;
+    padding: 4rem 0;
+    background-color: #fff;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: left;
+  }
+
+  .align-left {
+    text-align: left;
+  }
+
+  .align-center {
+    text-align: center;
+  }
+
+  .align-right {
+    text-align: right;
+  }
+
+  .footer-block h5 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+  }
+
+  .footer-block p {
+    margin: 0 0 0.75rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .footer-block a {
+    text-decoration: none;
+    color: var(--accent-color);
+  }
+
+  .footer-block a:hover {
+    text-decoration: underline;
+  }
   
   /* ----------------------------------
      Scroll Fade Utility
@@ -253,3 +479,258 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+/* ----------------------------------
+   Global Layout
+---------------------------------- */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* ----------------------------------
+   Media Queries
+---------------------------------- */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .services-intro {
+    position: static;
+    max-width: none;
+  }
+
+  .section-subtext {
+    max-width: 32rem;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .work-intro {
+    max-width: none;
+  }
+
+  .work-points {
+    gap: 1.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-block,
+  .align-left,
+  .align-center,
+  .align-right {
+    text-align: center;
+  }
+
+  .footer-block {
+    padding: 1rem 0;
+  }
+}
+
+/* ----------------------------------
+   Let's Talk Section
+---------------------------------- */
+.lets-talk-section {
+  padding: 10rem 0;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.lets-talk-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.lets-talk-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.statement.color-gradient {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.5;
+  background: linear-gradient(90deg, var(--accent-color), #0090F1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s linear infinite;
+}
+
+.lets-talk-cta {
+  display: inline-block;
+  border: 2px solid var(--accent-color);
+  border-radius: 999px;
+  padding: 1rem 2.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(1rem);
+  text-decoration: none;
+}
+
+.lets-talk-cta.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.lets-talk-cta:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.lets-talk-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007AFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-top: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.lets-talk-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.quote-tagline {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .lets-talk-section {
+    padding: 6rem 0;
+  }
+
+  .statement.color-gradient {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+}
+
+/* ----------------------------------
+   Quote Section
+---------------------------------- */
+.quote-section {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.quote-text {
+    font-size: 2.5rem;
+    line-height: 1.4;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.lets-talk-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.lets-talk-container.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lets-talk-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    color: #ffffff;
+    background-color: #000000;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.quote-tagline {
+    font-size: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .quote-text {
+    font-size: 2.5rem;
+  }
+}
+
+#cta-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#cta-container.visible {
+  opacity: 1;
+  visibility: visible;
+}

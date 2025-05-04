@@ -8,86 +8,135 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- Navigation -->
   <div class="navigation-container">
-    <nav class="container">
-      <a href="index.html" class="navigation-link">About</a>
-      <a href="blog.html" class="navigation-link">Blog</a>
-      <a href="contact.html" class="navigation-link w--current">Contact</a>
-    </nav>
+    <div class="container nav-flex">
+      <nav class="nav-links">
+        <a href="index.html" class="navigation-link">About</a>
+        <a href="blog.html" class="navigation-link">Blog</a>
+        <a href="contact.html" class="navigation-link w--current">Contact</a>
+      </nav>
+    </div>
   </div>
 
-  <section class="section contact-intro-section">
-    <div class="container">
-      <h1>About Rahul</h1>
-      <p>Rahul Waghmare is a U.S.-based technology consultant with a global lens. Backed by 17+ years of experience in Oracle ERP, finance transformation, and enterprise architecture, he has led mission-critical projects across the U.S., Europe, and India. He brings a rare mix of technical depth and business insight — helping organizations design systems that actually drive strategy.</p>
-      <p>From BlackLine to Oracle Cloud, AI pilots to full Chart of Accounts re-architecture — Rahul’s approach is always data-driven, outcome-focused, and business-aligned.</p>
-      <p>What really drives me is impact. I’ve seen how the right strategy — delivered with speed, simplicity, and clarity — can unlock enormous value, even in rigid legacy systems. If you’re standing at a decision point or navigating uncertainty, I’d be happy to support.</p>
-    </div>
-  </section>
+  <main>
+    <!-- Content Section -->
+    <section class="section contact-intro-section">
+      <div class="container">
+        <h1>About Rahul</h1>
+        <p>Rahul Waghmare is a U.S.-based technology consultant with a global lens. Backed by 17+ years of experience in Oracle ERP, finance transformation, and enterprise architecture, he has led mission-critical projects across the U.S., Europe, and India. He brings a rare mix of technical depth and business insight — helping organizations design systems that actually drive strategy.</p>
+        <p>From BlackLine to Oracle Cloud, AI pilots to full Chart of Accounts re-architecture — Rahul’s approach is always data-driven, outcome-focused, and business-aligned.</p>
+        <p>What really drives me is impact. I’ve seen how the right strategy — delivered with speed, simplicity, and clarity — can unlock enormous value, even in rigid legacy systems. If you’re standing at a decision point or navigating uncertainty, I’d be happy to support.</p>
+      </div>
+    </section>
 
-  <section class="section qualifications-section">
-    <div class="container">
-      <h2 class="section-heading">Qualifications & Certifications</h2>
-      <p class="section-intro">I connect business objectives with enterprise systems, helping finance and technology teams align through Oracle ERP, AI, and future-focused transformation.</p>
-      <div class="qualifications-grid">
-        <div class="qual-block">
-          <div class="qual-number">01</div>
-          <h4 class="qual-title">Qualifications</h4>
-          <p><strong>Completed</strong></p>
-          <ul>
-            <li>Bachelor of Engineering (Mechanical) – Pune University</li>
-            <li>Executive MBA – SMU Cox School of Business</li>
-          </ul>
-          <p><strong>Pursuing</strong></p>
-          <ul>
-            <li>Post Graduate Program in Artificial Intelligence and Machine Learning</li>
-          </ul>
+    <section class="section qualifications-section">
+      <div class="container services-grid">
+        
+        <!-- Left Column -->
+        <div class="services-intro">
+          <h3 class="section-heading">Qualifications & Certifications</h3>
+          <p class="section-subtext">
+            I connect business objectives with enterprise systems, helping finance and technology teams align through Oracle ERP, AI, and future-focused transformation.
+          </p>
         </div>
-        <div class="qual-block">
-          <div class="qual-number">02</div>
-          <h4 class="qual-title">Certifications</h4>
-          <p><strong>Completed</strong></p>
-          <ul>
-            <li>PMP® – Project Management Institute</li>
-            <li>Oracle Certified Specialist – Cloud PPM, RMCS, Financials</li>
-            <li>Oracle EBS R12 Projects Implementation Specialist</li>
-            <li>Oracle PPM Cloud Solution Engineer Specialist</li>
-            <li>Certified Blockchain Architect – Blockchain Council</li>
-            <li>Blockchain Solution Architect – BTA</li>
-            <li>IBM Blockchain Essentials & Foundation Developer</li>
-          </ul>
-        </div>
-        <div class="qual-block">
-          <div class="qual-number">03</div>
-          <h4 class="qual-title">Aspirations</h4>
-          <p><strong>Planning to Pursue</strong></p>
-          <ul>
-            <li>CFA® – Chartered Financial Analyst</li>
-            <li>CPA® – Certified Public Accountant</li>
-            <li>CQF – Certificate in Quantitative Finance</li>
-          </ul>
+
+        <!-- Right Column -->
+        <div class="services-wrapper">
+          
+          <div class="service">
+            <div class="service-header" onclick="toggleService(this)">
+              <div class="service-left">
+                <span class="point-number">01</span>
+                <h4 class="point-title">Qualifications</h4>
+              </div>
+              <span class="service-trigger">+</span>
+            </div>
+            <div class="service-points">
+              <strong>Completed</strong>
+              <ul>
+                <li>Bachelor of Engineering (Mechanical) – Pune University</li>
+                <li>Executive MBA – SMU Cox School of Business</li>
+              </ul>
+              <strong>Pursuing</strong>
+              <ul>
+                <li>Post Graduate Program in Artificial Intelligence and Machine Learning</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="service-header" onclick="toggleService(this)">
+              <div class="service-left">
+                <span class="point-number">02</span>
+                <h4 class="point-title">Certifications</h4>
+              </div>
+              <span class="service-trigger">+</span>
+            </div>
+            <div class="service-points">
+              <strong>Completed</strong>
+              <ul>
+                <li>PMP® – Project Management Institute</li>
+                <li>Oracle Certified Specialist – Cloud PPM, RMCS, Financials</li>
+                <li>Oracle EBS R12 Projects Implementation Specialist</li>
+                <li>Oracle PPM Cloud Solution Engineer Specialist</li>
+                <li>Certified Blockchain Architect – Blockchain Council</li>
+                <li>Blockchain Solution Architect – BTA</li>
+                <li>IBM Blockchain Essentials & Foundation Developer</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="service-header" onclick="toggleService(this)">
+              <div class="service-left">
+                <span class="point-number">03</span>
+                <h4 class="point-title">Aspirations</h4>
+              </div>
+              <span class="service-trigger">+</span>
+            </div>
+            <div class="service-points">
+              <strong>Planning to Pursue</strong>
+              <ul>
+                <li>CFA® – Chartered Financial Analyst</li>
+                <li>CPA® – Certified Public Accountant</li>
+                <li>CQF – Certificate in Quantitative Finance</li>
+              </ul>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <footer class="section">
-    <div class="container footer-container">
-      <div class="footer-columns">
-        <div>
-          <h4>Let’s Talk</h4>
-          <p>Email: rcwaghmare@gmail.com<br>Phone: +1 (917) 756 4010</p>
-        </div>
-        <div>
-          <h4>About</h4>
-          <p>ERP | AI Strategy | Finance Transformation</p>
-        </div>
-        <div>
-          <h4>Connect</h4>
-          <p><a href="https://linkedin.com/in/rcwaghmare" target="_blank">LinkedIn</a></p>
-        </div>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-block align-left">
+        <h5>Let's Talk</h5>
+        <p>Email: rcwaghmare@gmail.com</p>
+        <p>Phone: +1 (917) 756 4010</p>
       </div>
+
+      <div class="footer-block align-center">
+        <h5>About</h5>
+        <p>ERP | AI Strategy | Finance Transformation</p>
+      </div>
+
+      <div class="footer-block align-right">
+        <h5>Connect</h5>
+        <p><a href="https://linkedin.com/in/rcwaghmare" target="_blank">LinkedIn</a></p>
+      </div>
+
     </div>
   </footer>
+  
+  <script>
+    function toggleService(header) {
+      const service = header.closest('.service');
+      service.classList.toggle('is-open');
+    }
+  </script>
 </body>
 </html>

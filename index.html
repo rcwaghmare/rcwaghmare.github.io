@@ -10,275 +10,252 @@
 <body>
   <!-- Navigation -->
   <div class="navigation-container">
-    <nav class="container">
-      <a href="index.html" class="navigation-link w--current">About</a>
-      <a href="blog.html" class="navigation-link">Blog</a>
-      <a href="contact.html" class="navigation-link">Contact</a>
-    </nav>
+    <div class="container nav-flex">
+      <nav class="nav-links">
+        <a href="index.html" class="navigation-link w--current">About</a>
+        <a href="blog.html" class="navigation-link">Blog</a>
+        <a href="contact.html" class="navigation-link">Contact</a>
+      </nav>
+    </div>
   </div>
 
-  <!-- Hero Section -->
-  <section class="section hero-section">
-    <div class="container">
-      <h3 class="intro-label">Hi, I'm Rahul</h3>
-      <h1>I help modernize enterprise finance</h1>
-      <div class="intro-points">
-        <div class="intro-point current">with Oracle Cloud ERP</div>
-        <div class="intro-point">by embedding AI into forecasting</div>
-        <div class="intro-point">and scaling digital transformation</div>
+  <main>
+    <!-- Hero Section -->
+    <section class="section hero-section">
+      <div class="container">
+        <h3 class="intro-label">Hi, I'm Rahul</h3>
+        <h1>I help modernize enterprise finance</h1>
+        <div class="intro-points">
+          <div class="intro-point current">with Oracle Cloud ERP</div>
+          <div class="intro-point">by embedding AI into forecasting</div>
+          <div class="intro-point">and scaling digital transformation</div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About Section -->
-  <section class="section bio-section">
-    <div class="container">
-      <p>I'm a technology consultant and transformation architect, blending 17+ years of experience across Oracle Cloud ERP, finance transformation, and AI/ML implementation. I've worked with top consulting firms like PwC and Deloitte, and led critical projects for clients like Intuit, Motorola, and many other Fortune 500 enterprises.</p>
-      <p>My goal is to be an extension of your team — challenge assumptions, bring clarity to decisions, and design technology-enabled strategies that actually work.</p>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section class="section bio-section">
+      <div class="container">
+        <p>I'm a technology consultant and transformation architect, blending 17+ years of experience across Oracle Cloud ERP, finance transformation, and AI/ML implementation. I've worked with top consulting firms like PwC and Deloitte, and led critical projects for clients like Intuit, Motorola, and many other Fortune 500 enterprises.</p>
+        <p>My goal is to be an extension of your team — challenge assumptions, bring clarity to decisions, and design technology-enabled strategies that actually work.</p>
+      </div>
+    </section>
 
-  <!-- Stats Section -->
-  <section class="section stats-section">
-    <div class="container stats-grid">
-      <div class="stat-block">
-        <div class="stat-number-wrapper"><h5 class="stat-number">17</h5><span class="stat-plus">+</span></div>
-        <h3 class="stat-title">Years of Experience</h3>
-        <p class="stat-description">Delivering technology-led transformations in Oracle ERP, finance, and AI</p>
+    <!-- Stats Section -->
+    <section class="section stats-section">
+      <div class="container stats-grid">
+        <div class="stat-block">
+          <div class="stat-number-wrapper"><h5 class="stat-number">17</h5><span class="stat-plus">+</span></div>
+          <h3 class="stat-title">Years of Experience</h3>
+          <p class="stat-description">Delivering technology-led transformations in Oracle ERP, finance, and AI</p>
+        </div>
+        <div class="stat-block">
+          <div class="stat-number-wrapper"><h5 class="stat-number">15</h5><span class="stat-plus">+</span></div>
+          <h3 class="stat-title">ERP Projects Delivered</h3>
+          <p class="stat-description">Led implementations for PwC, Deloitte, and global clients like Motorola and Intuit</p>
+        </div>
+        <div class="stat-block">
+          <div class="stat-number-wrapper"><h5 class="stat-number">12</h5><span class="stat-plus">+</span></div>
+          <h3 class="stat-title">Industries Served</h3>
+          <p class="stat-description">Experience across tech, SaaS, manufacturing, healthcare, retail, and financial services</p>
+        </div>
       </div>
-      <div class="stat-block">
-        <div class="stat-number-wrapper"><h5 class="stat-number">15</h5><span class="stat-plus">+</span></div>
-        <h3 class="stat-title">ERP Projects Delivered</h3>
-        <p class="stat-description">Led implementations for PwC, Deloitte, and global clients like Motorola and Intuit</p>
-      </div>
-      <div class="stat-block">
-        <div class="stat-number-wrapper"><h5 class="stat-number">12</h5><span class="stat-plus">+</span></div>
-        <h3 class="stat-title">Industries Served</h3>
-        <p class="stat-description">Experience across tech, SaaS, manufacturing, healthcare, retail, and financial services</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- What I Can Provide Section -->
-  <section class="section services-section">
-    <div class="container accordion-container">
-      <div class="accordion-intro">
-        <h3 class="section-heading">What I Can Provide</h3>
-        <p class="section-intro">
-          I help businesses modernize enterprise operations by aligning Oracle ERP systems, AI, and finance transformation strategy.
-        </p>
-      </div>
+    <!-- What I Can Provide Section -->
+    <section class="section services-section">
+      <div class="container services-grid">
+        
+        <!-- Left Column -->
+        <div class="services-intro">
+          <h3 class="section-heading">What I Can Provide</h3>
+          <p class="section-subtext">
+            I help businesses modernize enterprise operations by aligning Oracle ERP systems, AI, and finance transformation strategy.
+          </p>
+        </div>
 
-      <div class="services-wrapper">
-        <div class="service">
-          <div class="service-header">
-            <div class="point-number"><div>01</div></div>
-            <h2 class="point-title">Discovery & Diagnostic Audit</h2>
-            <div class="service-trigger">+</div>
+        <!-- Right Column -->
+        <div class="services-wrapper">
+          <div class="service">
+            <div class="service-header" onclick="toggleService(this)">
+              <div class="service-left">
+                <span class="point-number">01</span>
+                <h4 class="point-title">Discovery & Diagnostic Audit</h4>
+              </div>
+              <span class="service-trigger">+</span>
+            </div>
+            <div class="service-points">
+              <ul>
+                <li>Process and systems deep dive</li>
+                <li>Oracle Cloud migration readiness check</li>
+                <li>COA, subledger, and design review</li>
+                <li>Friction and gap analysis</li>
+              </ul>
+            </div>
           </div>
-          <div class="service-points">
-            <ul>
-              <li>Process and systems deep dive</li>
-              <li>Oracle Cloud migration readiness check</li>
-              <li>COA, subledger, and design review</li>
-              <li>Friction and gap analysis</li>
-            </ul>
-          </div>
-        </div>
 
-        <div class="service">
-          <div class="service-header">
-            <div class="point-number"><div>02</div></div>
-            <h2 class="point-title">ERP & Tech Strategy</h2>
-            <div class="service-trigger">+</div>
+          <div class="service">
+            <div class="service-header" onclick="toggleService(this)">
+              <div class="service-left">
+                <span class="point-number">02</span>
+                <h4 class="point-title">ERP & Tech Strategy</h4>
+              </div>
+              <span class="service-trigger">+</span>
+            </div>
+            <div class="service-points">
+              <ul>
+                <li>ERP roadmap and transformation planning</li>
+                <li>Cloud vs. on-prem solution architecture</li>
+                <li>AI/ML pilot framing and value tracking</li>
+                <li>Finance-IT alignment strategies</li>
+              </ul>
+            </div>
           </div>
-          <div class="service-points">
-            <ul>
-              <li>ERP roadmap and transformation planning</li>
-              <li>Cloud vs. on-prem solution architecture</li>
-              <li>AI/ML pilot framing and value tracking</li>
-              <li>Finance-IT alignment strategies</li>
-            </ul>
-          </div>
-        </div>
 
-        <div class="service">
-          <div class="service-header">
-            <div class="point-number"><div>03</div></div>
-            <h2 class="point-title">Program Management</h2>
-            <div class="service-trigger">+</div>
+          <div class="service">
+            <div class="service-header" onclick="toggleService(this)">
+              <div class="service-left">
+                <span class="point-number">03</span>
+                <h4 class="point-title">Program Management</h4>
+              </div>
+              <span class="service-trigger">+</span>
+            </div>
+            <div class="service-points">
+              <ul>
+                <li>PMO setup and governance alignment</li>
+                <li>Agile delivery methods for transformation</li>
+                <li>Cross-functional execution management</li>
+                <li>Vendor and partner orchestration</li>
+              </ul>
+            </div>
           </div>
-          <div class="service-points">
-            <ul>
-              <li>PMO setup and governance alignment</li>
-              <li>Agile delivery methods for transformation</li>
-              <li>Cross-functional execution management</li>
-              <li>Vendor and partner orchestration</li>
-            </ul>
-          </div>
-        </div>
 
-        <div class="service">
-          <div class="service-header">
-            <div class="point-number"><div>04</div></div>
-            <h2 class="point-title">Finance Transformation Advisory</h2>
-            <div class="service-trigger">+</div>
-          </div>
-          <div class="service-points">
-            <ul>
-              <li>Interim SME or strategic advisor role</li>
-              <li>COA redesign and reporting enablement</li>
-              <li>Analytics and forecasting integration</li>
-              <li>Transformation support for M&A</li>
-            </ul>
+          <div class="service">
+            <div class="service-header" onclick="toggleService(this)">
+              <div class="service-left">
+                <span class="point-number">04</span>
+                <h4 class="point-title">Finance Transformation Advisory</h4>
+              </div>
+              <span class="service-trigger">+</span>
+            </div>
+            <div class="service-points">
+              <ul>
+                <li>Interim SME or strategic advisor role</li>
+                <li>COA redesign and reporting enablement</li>
+                <li>Analytics and forecasting integration</li>
+                <li>Transformation support for M&A</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Quote CTA -->
-  <section class="section quote-section">
-    <div class="container quote-overlay-wrapper">
-      <h2 class="statement color-gradient">
-        You don’t need a 100-slide deck. You need a partner who gets it.<br>
-        Let’s figure out what’s next — and what really matters.
-      </h2>
-      <a href="mailto:rcwaghmare@gmail.com" class="lets-talk-button">Let’s Talk</a>
-      <p class="cta-subline">Simple. Direct. Human.</p>
-    </div>
-  </section>
-
-  <!-- Why Work With Me -->
-  <section class="section why-section">
-    <div class="container why-container">
-      <div class="why-intro">
-        <h3>Why Work With Me</h3>
-        <p>You don’t always need a full-time transformation lead. You need the right partner, at the right moment, to bridge strategy and execution — without the overhead.</p>
+    <!-- Quote Section -->
+    <section class="quote-section">
+      <div class="quote-container">
+        <p id="fade-quote" class="quote-text">Navigate ERP and Finance transformation with experienced insight. Translate industry shifts into opportunity.</p>
       </div>
-      <div class="why-points">
-        <div class="why-point">
-          <div class="point-number">01</div>
-          <h4 class="why-title">Make Confident Decisions</h4>
-          <p class="why-description">Base your roadmap on operational clarity, data, and business impact — not assumptions.</p>
-        </div>
-        <div class="why-point">
-          <div class="point-number">02</div>
-          <h4 class="why-title">Stay Ahead of Change</h4>
-          <p class="why-description">Navigate ERP and finance transformation with experienced insight. Translate industry shifts into opportunity.</p>
-        </div>
-        <div class="why-point">
-          <div class="point-number">03</div>
-          <h4 class="why-title">Drive Real Results</h4>
-          <p class="why-description">Move beyond frameworks to measurable outcomes. Leverage my ERP & AI experience for real impact.</p>
-        </div>
-        <div class="why-point">
-          <div class="point-number">04</div>
-          <h4 class="why-title">Get Strategic Support</h4>
-          <p class="why-description">Work with a guide who understands both systems and outcomes — and how to align them.</p>
-        </div>
+      
+      <div id="cta-container" class="lets-talk-container">
+        <a href="contact.html" class="lets-talk-button">Let's Talk</a>
+        <p class="quote-tagline">Simple. Direct. Human.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="section">
-    <div class="container footer-container">
-      <div class="footer-columns">
-        <div>
-          <h4>Let’s Talk</h4>
-          <p>Email: rcwaghmare@gmail.com<br>Phone: +1 (917) 756 4010</p>
+    <!-- Why Work With Me -->
+    <section class="section work-with-me-section">
+      <div class="container work-grid">
+        
+        <!-- Left Column -->
+        <div class="work-intro">
+          <h3 class="section-heading">Why Work With Me</h3>
+          <p class="section-subtext">
+            You don't always need a full-time transformation lead. You need the right partner, at the right moment, to bridge strategy and execution — without the overhead.
+          </p>
         </div>
-        <div>
-          <h4>About</h4>
-          <p>ERP | AI Strategy | Finance Transformation</p>
-        </div>
-        <div>
-          <h4>Connect</h4>
-          <p><a href="https://linkedin.com/in/rcwaghmare" target="_blank">LinkedIn</a></p>
+
+        <!-- Right Column -->
+        <div class="work-points">
+          <div class="work-point">
+            <span class="point-number">01</span>
+            <div class="point-body">
+              <h4 class="point-title">Make Confident Decisions</h4>
+              <p>Base your roadmap on operational clarity, data, and business impact — not assumptions.</p>
+            </div>
+          </div>
+
+          <div class="work-point">
+            <span class="point-number">02</span>
+            <div class="point-body">
+              <h4 class="point-title">Stay Ahead of Change</h4>
+              <p>Navigate ERP and finance transformation with experienced insight. Translate industry shifts into opportunity.</p>
+            </div>
+          </div>
+
+          <div class="work-point">
+            <span class="point-number">03</span>
+            <div class="point-body">
+              <h4 class="point-title">Drive Real Results</h4>
+              <p>Move beyond frameworks to measurable outcomes. Leverage my ERP & AI experience for real impact.</p>
+            </div>
+          </div>
+
+          <div class="work-point">
+            <span class="point-number">04</span>
+            <div class="point-body">
+              <h4 class="point-title">Get Strategic Support</h4>
+              <p>Work with a guide who understands both systems and outcomes — and how to align them.</p>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      
+      <div class="footer-block align-left">
+        <h5>Let's Talk</h5>
+        <p>Email: rcwaghmare@gmail.com</p>
+        <p>Phone: +1 (917) 756 4010</p>
+      </div>
+
+      <div class="footer-block align-center">
+        <h5>About</h5>
+        <p>ERP | AI Strategy | Finance Transformation</p>
+      </div>
+
+      <div class="footer-block align-right">
+        <h5>Connect</h5>
+        <p><a href="https://linkedin.com/in/rcwaghmare" target="_blank">LinkedIn</a></p>
+      </div>
+
     </div>
   </footer>
 
   <script src="assets/js/load-markdown.js"></script>
   <script src="assets/js/menu-scroll.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll(".service").forEach(service => {
-        service.querySelector(".service-trigger").addEventListener("click", () => {
-          service.classList.toggle("is-open");
-        });
-      });
-    });
+    function toggleService(header) {
+      const service = header.closest('.service');
+      service.classList.toggle('is-open');
+    }
   </script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const points = document.querySelectorAll(".intro-point");
-      points.forEach((point, index) => {
-        point.classList.add(`intro-point-${index}`);
-      });
+      let currentIndex = 0;
 
-      const count = points.length;
-      function slide(index) {
-        const i = index % count;
-        const current = document.querySelector(".intro-point.current");
-        const next = document.querySelector(`.intro-point-${i}`);
-        if (current) current.classList.remove("current");
-        next.classList.add("current");
-        setTimeout(() => slide(i + 1), 3000);
+      function cyclePoints() {
+        points.forEach(point => point.classList.remove("current"));
+        points[currentIndex].classList.add("current");
+        currentIndex = (currentIndex + 1) % points.length;
       }
 
-      slide(0);
-    });
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      });
-
-      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    });
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const nav = document.querySelector(".navigation-container");
-      let lastScrollTop = 0;
-
-      window.addEventListener("scroll", () => {
-        const scrollTop = window.scrollY;
-        if (scrollTop > lastScrollTop) {
-          nav.style.opacity = "0";
-          nav.style.transition = "opacity 0.4s ease";
-        } else {
-          nav.style.opacity = "1";
-          nav.style.transition = "opacity 0.4s ease";
-        }
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-      });
-    });
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const quote = document.querySelector(".statement");
-      const button = document.querySelector(".lets-talk-button");
-      const subline = document.querySelector(".cta-subline");
-
-      window.addEventListener("scroll", () => {
-        const scrollY = window.scrollY;
-        const fadeStart = 100; // where fading begins
-        const fadeEnd = 600;   // where it's fully faded
-
-        const opacity = Math.max(0, 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart));
-        if (quote) quote.style.opacity = opacity;
-        if (button) button.style.opacity = opacity;
-        if (subline) subline.style.opacity = opacity;
-      });
+      cyclePoints(); // Show first point immediately
+      setInterval(cyclePoints, 3000); // Cycle every 3 seconds
     });
   </script>
 </body>
