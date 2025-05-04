@@ -1,0 +1,255 @@
+/* ----------------------------------
+   Global Typography & Colors
+---------------------------------- */
+:root {
+    --accent-color: #0071E3;
+    --hover-color: #0090F1;
+    --text-color: #1D1D1F;
+    --subtext-color: #555555;
+    --divider-color: rgba(0, 113, 227, 0.2);
+    --background-color: #FFFFFF;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--background-color);
+    font-family: 'Nunito Sans', 'Avenir', 'Helvetica Neue', sans-serif;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  
+  /* ----------------------------------
+     Layout & Containers
+  ---------------------------------- */
+  .container {
+    max-width: 1140px;
+    padding: 0 3rem;
+    margin: 0 auto;
+  }
+  
+  .section {
+    padding: 6rem 0;
+  }
+  
+  /* ----------------------------------
+     Navigation
+  ---------------------------------- */
+  .navigation-container {
+    position: fixed;
+    width: 100%;
+    background: white;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: opacity 0.4s ease;
+  }
+  
+  .navigation-link {
+    margin-right: 2rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+  }
+  
+  .navigation-link.w--current {
+    color: var(--accent-color);
+  }
+  
+  /* ----------------------------------
+     Hero Section
+  ---------------------------------- */
+  .hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+  
+  .intro-points {
+    position: relative;
+    height: 2.8rem;  /* increased for better vertical padding */
+    overflow: hidden;
+  }
+
+  .intro-point {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+  }
+
+  .intro-point.current {
+    opacity: 1;
+    transform: translateY(0);
+    position: absolute;
+  }
+  
+  /* ----------------------------------
+     Stats Grid
+  ---------------------------------- */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    text-align: left;
+  }
+  
+  .stat-number-wrapper {
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .stat-number {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    line-height: 1;
+  }
+  
+  .stat-plus {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-left: 0.25rem;
+    color: var(--accent-color);
+  }
+  
+  .stat-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  
+  .stat-description {
+    color: var(--subtext-color);
+    margin-top: 0.5rem;
+  }
+  
+  /* ----------------------------------
+     CTA Section
+  ---------------------------------- */
+  .color-gradient {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--accent-color), var(--hover-color), var(--accent-color));
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 4s linear infinite;
+    text-align: center;
+    line-height: 1.4;
+  }
+  
+  @keyframes gradientShift {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+  }
+  
+  .lets-talk-button {
+    margin-top: 2rem;
+    border: 2px solid var(--accent-color);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    color: var(--accent-color);
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+  
+  .lets-talk-button:hover {
+    background: var(--accent-color);
+    color: white;
+  }
+  
+  .cta-subline {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--subtext-color);
+  }
+  
+  /* ----------------------------------
+     Accordion Section
+  ---------------------------------- */
+  .services-wrapper .service {
+    border-bottom: 1px solid var(--divider-color);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service.is-open .service-trigger {
+    transform: rotate(45deg);
+  }
+  
+  .service-points li::before {
+    content: "—";
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+    font-weight: 600;
+  }
+  
+  /* ----------------------------------
+     "Why Work With Me"
+  ---------------------------------- */
+  .why-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+  }
+  
+  .why-points {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  .why-point {
+    border-top: 1px solid var(--divider-color);
+    padding-top: 2rem;
+  }
+  
+  .why-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* ----------------------------------
+     Footer
+  ---------------------------------- */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    padding-top: 4rem;
+    font-size: 0.9rem;
+  }
+  
+  .footer-columns div h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* ----------------------------------
+     Scroll Fade Utility
+  ---------------------------------- */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
