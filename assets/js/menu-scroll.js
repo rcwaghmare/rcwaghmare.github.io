@@ -37,3 +37,37 @@ document.addEventListener("DOMContentLoaded", () => {
   // Check initial scroll position
   handleScroll();
 });
+
+// Navigation menu scroll effects
+document.addEventListener('DOMContentLoaded', function() {
+    const nav = document.querySelector('.navigation-container');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            nav.style.borderBottom = '1px solid rgba(0,0,0,0.1)';
+            nav.style.boxShadow = '0 4px 16px rgba(0,0,0,0.05)';
+        } else {
+            nav.style.borderBottom = 'none';
+            nav.style.boxShadow = 'none';
+        }
+    });
+});
+
+// Quote and CTA scroll animation
+window.addEventListener('scroll', () => {
+  const quote = document.getElementById('quote-section');
+  const cta = document.getElementById('cta-wrapper');
+
+  if (quote && cta) {
+    const scrollY = window.scrollY;
+    const trigger = quote.offsetTop + quote.offsetHeight / 2;
+
+    if (scrollY > trigger) {
+      quote.classList.add('fade-out');
+      cta.classList.add('fade-in');
+    } else {
+      quote.classList.remove('fade-out');
+      cta.classList.remove('fade-in');
+    }
+  }
+});
